@@ -1,5 +1,5 @@
 import { Roboto_Flex as Font } from "next/font/google";
-import { Header } from "@/components/header";
+import Link from "next/link";
 import "./globals.css";
 
 const font = Font({
@@ -20,7 +20,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Header />
+        <header>
+          <nav>
+            <ul>
+              <li>
+                <Link href="/">README.md</Link>
+              </li>
+              <li>
+                <Link href="/showcase">Showcase</Link>
+              </li>
+              <li>
+                <Link href="/last-commits">Last commits</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
         {children}
       </body>
     </html>
