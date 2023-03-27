@@ -1,4 +1,4 @@
-import { Roboto_Flex as Font, Roboto_Mono as MonoFont } from "next/font/google";
+import { Roboto_Flex as Font } from "next/font/google";
 import Image from "next/image";
 import clsx from "clsx";
 import Navbar from "./Navbar";
@@ -7,11 +7,6 @@ import "./globals.css";
 const regularFont = Font({
   subsets: ["latin"],
   variable: "--next-font",
-});
-
-const monoFont = MonoFont({
-  subsets: ["latin"],
-  variable: "--next-mono-font",
 });
 
 export const metadata = {
@@ -38,7 +33,6 @@ export default function RootLayout({
       <body
         className={clsx(
           regularFont.variable,
-          monoFont.variable,
           "flex w-[clamp(45ch,50%,75ch)] items-start mx-auto py-16 gap-8 tracking-wide bg-neutral-900 text-yellow-50"
         )}
       >
@@ -69,7 +63,7 @@ export default function RootLayout({
             </p>
           </div>
 
-          <ul className="flex items-center gap-4">
+          <ul className="flex items-center gap-4 opacity-75">
             <li>
               <a
                 href="https://github.com/xandjiji"

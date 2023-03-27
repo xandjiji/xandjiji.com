@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <>
       {!!currentRoute && (
-        <p className="code text-xs opacity-75 mb-4">
+        <p className="font-mono text-xs opacity-75 mb-4">
           xandjiji / {currentRoute.children}
         </p>
       )}

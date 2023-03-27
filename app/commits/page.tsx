@@ -36,7 +36,7 @@ export default async function LastCommits() {
       <ul>
         {lastCommits.map(({ sha, author, message, createdAt, url }) => (
           <li key={`${sha}-${createdAt}`}>
-            {author.name} - <a href={url}>{sha}</a>
+            {message} - {author.name} - <a href={url}>{sha}</a>
           </li>
         ))}
       </ul>
