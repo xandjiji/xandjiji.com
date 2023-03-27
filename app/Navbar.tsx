@@ -15,23 +15,33 @@ const navItems: {
 const Navbar = () => {
   const pathname = usePathname();
 
+  const currentRoute = navItems.find(({ href }) => href === pathname);
+
   return (
-    <nav>
-      <ul className="flex gap-4 items-center">
-        {navItems.map((linkProps) => (
-          <li key={linkProps.href}>
-            <Link
-              {...linkProps}
-              className={clsx(
-                pathname === linkProps.href
-                  ? "underline-offset-8 decoration-2 hover:text-orange-300 text-orange-400"
-                  : "no-underline"
-              )}
-            />
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      {!!currentRoute && (
+        <p className="code text-xs opacity-75 mb-4">
+          xandjiji / {currentRoute.children}
+        </p>
+      )}
+
+      <nav>
+        <ul className="flex gap-4 items-center">
+          {navItems.map((linkProps) => (
+            <li key={linkProps.href}>
+              <Link
+                {...linkProps}
+                className={clsx(
+                  currentRoute?.href === linkProps.href
+                    ? "font-bold underline-offset-8 decoration-2 hover:text-orange-300 text-orange-400"
+                    : "no-underline"
+                )}
+              />
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 };
 
