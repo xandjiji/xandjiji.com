@@ -33,10 +33,18 @@ export default async function LastCommits() {
 
   return (
     <main>
-      <ul>
+      <ul className="grid gap-4">
         {lastCommits.map(({ sha, author, message, createdAt, url }) => (
-          <li key={`${sha}-${createdAt}`}>
-            {message} - {author.name} - <a href={url}>{sha}</a>
+          <li key={`${sha}-${createdAt}`} className="flex items-center gap-2">
+            <div className="grow">
+              <p className="line-clamp-1">{message}</p>
+              <span className="text-xs">
+                {author.name} - {createdAt?.toISOString()}
+              </span>
+            </div>
+            <a href={url} className="shrink-0 text-xs">
+              {sha.slice(0, 7)}
+            </a>
           </li>
         ))}
       </ul>

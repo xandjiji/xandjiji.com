@@ -5,6 +5,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
+    require("@tailwindcss/line-clamp"),
     /** @type {import('tailwindcss/types/config').PluginCreator} */
     ({ addUtilities }) => {
       addUtilities({
