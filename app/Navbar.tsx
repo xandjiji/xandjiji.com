@@ -9,7 +9,7 @@ const navItems: {
 }[] = [
   { href: "/", children: "README.md" },
   { href: "/showcase", children: "showcase" },
-  { href: "/last-commits", children: "commits" },
+  { href: "/commits", children: "commits" },
 ];
 
 const Navbar = () => {

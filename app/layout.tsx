@@ -65,7 +65,7 @@ export default function RootLayout({
               </a>
             </p>
             <p>
-              <a href="https://www.exevopan.com/">@exevopan</a>
+              <a href="https://www.exevopan.com/">@ExevoPan</a>
             </p>
           </div>
 
