@@ -1,7 +1,7 @@
 import { Roboto_Flex as Font, Roboto_Mono as MonoFont } from "next/font/google";
 import Image from "next/image";
 import clsx from "clsx";
-import Link from "next/link";
+import Navbar from "./Navbar";
 import "./globals.css";
 
 const regularFont = Font({
@@ -39,7 +39,7 @@ export default function RootLayout({
         className={clsx(
           regularFont.variable,
           monoFont.variable,
-          "flex w-[clamp(45ch,50%,75ch)] mx-auto py-16 items-center gap-8 tracking-wide bg-neutral-900 text-yellow-50"
+          "flex w-[clamp(45ch,50%,75ch)] items-start mx-auto py-16 gap-8 tracking-wide bg-neutral-900 text-yellow-50"
         )}
       >
         <aside className="grid gap-4">
@@ -69,22 +69,14 @@ export default function RootLayout({
             </p>
           </div>
         </aside>
-        <header>
-          <nav>
-            <ul>
-              <li>
-                <Link href="/">README.md</Link>
-              </li>
-              <li>
-                <Link href="/showcase">Showcase</Link>
-              </li>
-              <li>
-                <Link href="/last-commits">Last commits</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        {children}
+
+        <div className="grid gap-8">
+          <header>
+            <Navbar />
+          </header>
+
+          {children}
+        </div>
       </body>
     </html>
   );
