@@ -4,5 +4,14 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    /** @type {import('tailwindcss/types/config').PluginCreator} */
+    ({ addUtilities }) => {
+      addUtilities({
+        ".code": {
+          "font-family": "var(--next-mono-font)",
+        },
+      });
+    },
+  ],
 };
