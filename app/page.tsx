@@ -7,12 +7,12 @@ const Strong = ({ className, ...props }: JSX.IntrinsicElements["strong"]) => (
 export default function Home() {
   return (
     <main className="text-sm text-onBackgroundVariant">
-      <p className="mb-4">
+      <p>
         A creator first, software engineer second. Mostly focused on frontend
         web development.
       </p>
 
-      <ul className="list-disc grid gap-1 marker: list-inside marker:bg-onBackground">
+      <ul className="my-6 list-disc grid gap-1 marker: list-inside marker:bg-onBackground">
         <li>
           Fascinated by <Strong>design systems</Strong> and{" "}
           <Strong>UI/UX</Strong>
@@ -47,6 +47,11 @@ export default function Home() {
           , completely solo
         </li>
       </ul>
+
+      <blockquote className="backticks font-thin italic px-3 py-2">
+        {'"'}the man who thinks he can and the man who thinks he can{"'"}t are
+        both correct{'"'}
+      </blockquote>
     </main>
   );
 }
