@@ -40,7 +40,7 @@ export default function RootLayout({
             <h2 className="font-bold text-[50px] leading-none tracking-wider">
               xandjiji
             </h2>
-            <p className="font-light text-onBackgroundFaded">
+            <p className="font-light text-onBackgroundVariant">
               alexandre regali seleghim
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function RootLayout({
             </p>
           </div>
 
-          <ul className="flex items-center gap-4 text-onBackgroundFaded">
+          <ul className="flex items-center gap-4 text-onBackgroundVariant">
             <li>
               <a
                 href="https://github.com/xandjiji"

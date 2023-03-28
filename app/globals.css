@@ -19,6 +19,12 @@ a {
   @apply text-link hover:text-linkAccent font-mono underline underline-offset-4;
 }
 
+@layer components {
+  .backticks {
+    @apply font-mono border border-codeBackgroundVariant text-onBackground text-sm px-1.5 py-0.5 bg-codeBackground rounded font-bold;
+  }
+}
+
 svg {
   @apply fill-current;
 }

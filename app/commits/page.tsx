@@ -75,7 +75,7 @@ export default async function LastCommits() {
       <ul className="grid gap-4">
         {lastCommits.map(({ sha, author, message, createdAt, url }) => (
           <li key={`${sha}-${createdAt}`}>
-            <p className="font-mono font-bold">{message}</p>
+            <p className="w-fit backticks">{message}</p>
             <span className="text-xs">
               <a href={url} className="shrink-0 text-xs">
                 {sha.slice(0, 7)}
