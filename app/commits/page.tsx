@@ -4,6 +4,7 @@ type Commit = {
   message: string;
   url: string;
   createdAt?: Date;
+  repo: { name: string; url: string };
 };
 
 const MILLISECONDS_IN = {
@@ -45,6 +46,12 @@ const getReadableTimeAgo = (pastDate: Date) => {
   }
 };
 
+const Slash = () => (
+  <span role="none" className="text-onBackgroundVariant mx-1.5">
+    /
+  </span>
+);
+
 export default async function LastCommits() {
   const lastCommits: Commit[] = await fetch(
     "https://api.github.com/users/xandjiji/events"
@@ -61,27 +68,40 @@ export default async function LastCommits() {
         )
         .flat()
         .filter(({ author }) => author.email === "xandjiji@gmail.com")
-        .map((commit: Commit) => {
+        .map((commit: Commit): Commit => {
           const [, , , , owner, repo] = commit.url.split("/");
           return {
             ...commit,
             url: `https://github.com/${owner}/${repo}/commit/${commit.sha}`,
+            repo: { name: repo, url: `https://github.com/${owner}/${repo}` },
           };
         })
     );
 
   return (
     <main>
-      <ul className="grid gap-4">
-        {lastCommits.map(({ sha, author, message, createdAt, url }) => (
+      <ul className="grid gap-6">
+        {lastCommits.map(({ sha, author, message, createdAt, url, repo }) => (
           <li key={`${sha}-${createdAt}`}>
             <p className="w-fit backticks">{message}</p>
             <span className="text-xs">
-              <a href={url} className="shrink-0 text-xs">
+              <a href={repo.url} target="_blank" className="shrink-0 text-xs">
+                {repo.name}
+              </a>
+
+              <Slash />
+
+              <a href={url} target="_blank" className="shrink-0 text-xs">
                 {sha.slice(0, 7)}
-              </a>{" "}
-              <span>{author.name}</span>{" "}
-              {createdAt ? ` - ${getReadableTimeAgo(createdAt)}` : ""}
+              </a>
+
+              <Slash />
+
+              {!!createdAt && (
+                <span className="text-onBackgroundVariant">
+                  {getReadableTimeAgo(createdAt)}
+                </span>
+              )}
             </span>
           </li>
         ))}
