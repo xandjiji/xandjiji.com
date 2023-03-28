@@ -47,12 +47,22 @@ export default function RootLayout({
 
           <div>
             <p>
-              <a href="https://www.ifood.com.br/" target="_blank">
+              <a
+                href="https://www.ifood.com.br/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 @iFood
               </a>
             </p>
             <p>
-              <a href="https://www.exevopan.com/">@ExevoPan</a>
+              <a
+                href="https://www.exevopan.com/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                @ExevoPan
+              </a>
             </p>
           </div>
 
@@ -61,6 +71,7 @@ export default function RootLayout({
               <a
                 href="https://github.com/xandjiji"
                 target="_blank"
+                rel="noreferrer noopener"
                 className="text-current"
               >
                 <svg width="24px" height="24px" viewBox="0 0 496 512">
@@ -73,6 +84,7 @@ export default function RootLayout({
               <a
                 href="https://www.linkedin.com/in/xandjiji/"
                 target="_blank"
+                rel="noreferrer noopener"
                 className="text-current"
               >
                 <svg width="24px" height="24px" viewBox="0 0 448 512">

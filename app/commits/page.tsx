@@ -85,13 +85,23 @@ export default async function LastCommits() {
           <li key={`${sha}-${createdAt}`}>
             <p className="w-fit backticks">{message}</p>
             <span className="text-xs">
-              <a href={repo.url} target="_blank" className="shrink-0 text-xs">
+              <a
+                href={repo.url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="shrink-0 text-xs"
+              >
                 {repo.name}
               </a>
 
               <Slash />
 
-              <a href={url} target="_blank" className="shrink-0 text-xs">
+              <a
+                href={url}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="shrink-0 text-xs"
+              >
                 {sha.slice(0, 7)}
               </a>
 
