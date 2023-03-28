@@ -98,9 +98,12 @@ export default async function LastCommits() {
               <Slash />
 
               {!!createdAt && (
-                <span className="text-onBackgroundVariant">
+                <time
+                  className="text-onBackgroundVariant"
+                  dateTime={createdAt.toISOString()}
+                >
                   {getReadableTimeAgo(createdAt)}
-                </span>
+                </time>
               )}
             </span>
           </li>
