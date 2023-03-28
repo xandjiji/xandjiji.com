@@ -48,7 +48,7 @@ export default function Home() {
         </li>
       </ul>
 
-      <blockquote className="backticks font-thin italic px-3 py-2">
+      <blockquote className="backticks italic px-3 py-2">
         {'"'}the man who thinks he can and the man who thinks he can{"'"}t are
         both correct{'"'}
       </blockquote>
