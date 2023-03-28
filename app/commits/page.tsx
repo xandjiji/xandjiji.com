@@ -6,6 +6,45 @@ type Commit = {
   createdAt?: Date;
 };
 
+const MILLISECONDS_IN = {
+  MINUTES: 60 * 1000,
+  HOURS: 60 * 60 * 1000,
+  DAYS: 24 * 60 * 60 * 1000,
+  MONTHS: 30 * 24 * 60 * 60 * 1000,
+};
+
+const amountByUnits = (
+  milliseconds: number,
+  unit: keyof typeof MILLISECONDS_IN
+) => {
+  const amount = Math.floor(milliseconds / MILLISECONDS_IN[unit]);
+  return amount > 0 ? amount : false;
+};
+
+const getReadableTimeAgo = (pastDate: Date) => {
+  const timeDiff = +new Date() - +pastDate;
+
+  let amount = amountByUnits(timeDiff, "MONTHS");
+  if (amount) {
+    return `${amount} ${amount > 1 ? "months" : "month"} ago`;
+  }
+
+  amount = amountByUnits(timeDiff, "DAYS");
+  if (amount) {
+    return `${amount} ${amount > 1 ? "days" : "day"} ago`;
+  }
+
+  amount = amountByUnits(timeDiff, "HOURS");
+  if (amount) {
+    return `${amount} ${amount > 1 ? "hours" : "hour"} ago`;
+  }
+
+  amount = amountByUnits(timeDiff, "MINUTES");
+  if (amount) {
+    return `${amount} ${amount > 1 ? "minutes" : "minute"} ago`;
+  }
+};
+
 export default async function LastCommits() {
   const lastCommits: Commit[] = await fetch(
     "https://api.github.com/users/xandjiji/events"
@@ -41,7 +80,8 @@ export default async function LastCommits() {
               <a href={url} className="shrink-0 text-xs">
                 {sha.slice(0, 7)}
               </a>{" "}
-              <span>{author.name}</span> - {createdAt?.toISOString()}
+              <span>{author.name}</span>{" "}
+              {createdAt ? ` - ${getReadableTimeAgo(createdAt)}` : ""}
             </span>
           </li>
         ))}
