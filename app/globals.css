@@ -16,7 +16,7 @@ body {
 }
 
 a {
-  @apply text-blue-400 hover:text-sky-400 font-mono underline underline-offset-4;
+  @apply text-link hover:text-linkAccent font-mono underline underline-offset-4;
 }
 
 svg {

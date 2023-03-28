@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <>
       {!!currentRoute && (
-        <p className="font-mono text-xs opacity-75 mb-4">
+        <p className="font-mono text-xs text-onBackgroundFaded mb-4">
           xandjiji / {currentRoute.children}
         </p>
       )}
@@ -33,7 +33,7 @@ const Navbar = () => {
                 {...linkProps}
                 className={clsx(
                   currentRoute?.href === linkProps.href
-                    ? "font-bold underline-offset-8 decoration-2 hover:text-orange-300 text-orange-400"
+                    ? "font-bold underline-offset-8 decoration-2 hover:text-accent text-accent"
                     : "no-underline"
                 )}
               />

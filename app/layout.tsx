@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={clsx(
           regularFont.variable,
-          "flex w-[clamp(45ch,50%,75ch)] items-start mx-auto py-16 gap-8 tracking-wide bg-neutral-900 text-yellow-50"
+          "flex w-[clamp(45ch,50%,75ch)] items-start mx-auto py-16 gap-8 tracking-wide bg-background text-onBackground"
         )}
       >
         <aside className="grid gap-4">
@@ -40,7 +40,9 @@ export default function RootLayout({
             <h2 className="font-bold text-[50px] leading-none tracking-wider">
               xandjiji
             </h2>
-            <p className="font-light opacity-75">alexandre regali seleghim</p>
+            <p className="font-light text-onBackgroundFaded">
+              alexandre regali seleghim
+            </p>
           </div>
 
           <div>
@@ -54,7 +56,7 @@ export default function RootLayout({
             </p>
           </div>
 
-          <ul className="flex items-center gap-4 opacity-75">
+          <ul className="flex items-center gap-4 text-onBackgroundFaded">
             <li>
               <a
                 href="https://github.com/xandjiji"
