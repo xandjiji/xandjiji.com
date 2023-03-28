@@ -45,27 +45,6 @@ export default function RootLayout({
             </p>
           </div>
 
-          <div>
-            <p>
-              <a
-                href="https://www.ifood.com.br/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                @iFood
-              </a>
-            </p>
-            <p>
-              <a
-                href="https://www.exevopan.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                @ExevoPan
-              </a>
-            </p>
-          </div>
-
           <ul className="flex items-center gap-4 text-onBackgroundVariant">
             <li>
               <a
