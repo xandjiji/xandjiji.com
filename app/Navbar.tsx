@@ -32,6 +32,7 @@ const Navbar = () => {
               <Link
                 {...linkProps}
                 className={clsx(
+                  "text-2xl",
                   currentRoute?.href === linkProps.href
                     ? "font-bold underline-offset-8 decoration-2 hover:text-accent text-accent"
                     : "no-underline"
