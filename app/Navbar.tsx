@@ -26,7 +26,7 @@ const Navbar = () => {
       )}
 
       <nav>
-        <ul className="flex gap-4 items-center">
+        <ul className="flex gap-4 overflow-auto items-center sm:max-w-none max-w-[calc(100vw-40px)] -mb-3 pb-3">
           {navItems.map((linkProps) => (
             <li key={linkProps.href}>
               <Link
