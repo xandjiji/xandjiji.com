@@ -25,8 +25,8 @@ const Navbar = () => {
         </p>
       )}
 
-      <nav>
-        <ul className="flex gap-4 overflow-auto items-center sm:max-w-none max-w-[calc(100vw-40px)] -mb-3 pb-3">
+      <nav className="-mb-4">
+        <ul className="flex gap-4 overflow-auto items-center sm:max-w-none max-w-[calc(100vw-40px)] pb-3 -mb-3">
           {navItems.map((linkProps) => (
             <li key={linkProps.href}>
               <Link
@@ -41,6 +41,11 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <div
+          role="none"
+          className="w-full bg-gradient-to-b from-background to-transparent h-4"
+        />
       </nav>
     </>
   );
