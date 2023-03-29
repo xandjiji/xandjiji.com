@@ -12,8 +12,10 @@ const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
   <div>
     <h3 className="text-2xl leading-none font-bold tracking-wide">{name}</h3>
 
-    <div className="flex gap-4 justify-between w-full items-center my-4">
-      <p className="text-onBackgroundVariant text-sm">{description}</p>
+    <div className="flex gap-8 justify-between w-full items-center my-4">
+      <p className="text-onBackgroundVariant text-sm text-justify">
+        {description}
+      </p>
 
       <Image
         src={imageSrc}
@@ -68,15 +70,19 @@ export default function Showcase() {
         ]}
       />
       <Item
-        name="Exevo Pan"
-        description="A better experience for the Char Bazaar"
-        imageSrc="/exevopan.png"
-        tags={[
-          "design systems",
-          "web scraping",
-          "fullstack",
-          "business",
-          "ui/ux",
+        name="Stardew Helper"
+        description="A companion app for Stardew Valley players. Its fully loaded with tons of information about the game, with a much better UX than using a Wiki"
+        imageSrc="/stardew.png"
+        tags={["react", "pwa", "design"]}
+        links={[
+          {
+            children: "website",
+            href: "https://xandjiji.github.io/stardew-helper/",
+          },
+          {
+            children: "github",
+            href: "https://github.com/xandjiji/stardew-helper",
+          },
         ]}
       />
     </main>
