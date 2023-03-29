@@ -71,7 +71,7 @@ export default function Showcase() {
       />
       <Item
         name="Stardew Helper"
-        description="A companion app for Stardew Valley players. Its fully loaded with tons of information about the game, with a much better UX than using a Wiki"
+        description="A companion app for Stardew Valley players. Its fully loaded with tons of information about the game, with a much better UX than using a Wiki. Built while learning React"
         imageSrc="/stardew.png"
         tags={["react", "pwa", "design"]}
         links={[
@@ -82,6 +82,22 @@ export default function Showcase() {
           {
             children: "github",
             href: "https://github.com/xandjiji/stardew-helper",
+          },
+        ]}
+      />
+      <Item
+        name="Pokemon Trainer Card Generator"
+        description="Playing around with some technologies until I've glued everything together into this fun Twitter bot"
+        imageSrc="/pokehash.png"
+        tags={["node", "twitter api", "image manipulation"]}
+        links={[
+          {
+            children: "website",
+            href: "https://twitter.com/PokeTrainerCard",
+          },
+          {
+            children: "github",
+            href: "https://github.com/xandjiji/stardew-helperhttps://github.com/xandjiji/Pokemon-Trainer-Card-Generator",
           },
         ]}
       />
