@@ -28,7 +28,6 @@ export default function Home() {
             href="https://www.ifood.com.br/"
             target="_blank"
             rel="noreferrer noopener"
-            className="decoration-accent"
           >
             <Strong>iFood</Strong>
           </a>
@@ -40,7 +39,6 @@ export default function Home() {
             href="https://www.exevopan.com/"
             target="_blank"
             rel="noreferrer noopener"
-            className="decoration-accent"
           >
             <Strong>Exevo Pan</Strong>
           </a>
