@@ -5,9 +5,10 @@ type ItemProps = {
   description: string;
   imageSrc: string;
   tags: string[];
+  links?: { children: string; href: string }[];
 };
 
-const Item = ({ name, description, imageSrc, tags }: ItemProps) => (
+const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
   <div>
     <h3 className="text-2xl leading-none font-bold tracking-wide">{name}</h3>
 
@@ -23,6 +24,19 @@ const Item = ({ name, description, imageSrc, tags }: ItemProps) => (
         className="shrink-0"
       />
     </div>
+
+    {links.length > 0 && (
+      <ul className="mb-4 flex gap-2">
+        {links.map((linkProps) => (
+          <a
+            key={linkProps.href}
+            {...linkProps}
+            className="text-xs"
+            target="_blank"
+          />
+        ))}
+      </ul>
+    )}
 
     <div className="flex flex-wrap gap-2">
       {tags.map((tag) => (
@@ -47,6 +61,10 @@ export default function Showcase() {
           "web scraping",
           "fullstack",
           "business",
+        ]}
+        links={[
+          { children: "website", href: "https://www.exevopan.com" },
+          { children: "github", href: "https://github.com/xandjiji/exevo-pan" },
         ]}
       />
       <Item
