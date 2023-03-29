@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={clsx(
           regularFont.variable,
-          "bg-background text-onBackground"
+          "bg-background text-onBackground lg:pr-56"
         )}
       >
         <div
@@ -32,7 +32,7 @@ export default function RootLayout({
           className="w-full h-4 md:h-16 bg-background sticky top-0 overflow-hidden"
         />
 
-        <div className="flex flex-col max-w-lg md:px-20 md:max-w-screen-md md:flex-row px-5 items-start mx-auto pb-4 md:pb-16 gap-8">
+        <div className="grid max-w-lg md:max-w-screen-md md:grid-cols-[190px_1fr] px-5 items-start mx-auto pb-4 md:pb-16 gap-8">
           <aside className="grid gap-4 mx-auto md:sticky md:top-16">
             <Image
               src="/avatar.png"
