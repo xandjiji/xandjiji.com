@@ -14,7 +14,7 @@ const regularFont = Font({
 export const metadata: Metadata = {
   title: {
     default: "xandjiji",
-    template: "%s - xandjiji",
+    template: "%s | xandjiji",
   },
   description:
     "A creator first, software engineer second. Mostly focused on web development.",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://xandjiji.com/preview.png",
-        width: 300,
-        height: 600,
+        width: 600,
+        height: 300,
       },
     ],
     locale: "en-US",
