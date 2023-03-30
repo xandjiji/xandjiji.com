@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 
 type ItemProps = {
   name: string;
@@ -17,13 +17,13 @@ const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
         {description}
       </p>
 
-      <Image
+      <img
         src={imageSrc}
         alt={name}
         width={60}
         height={60}
-        unoptimized
         className="shrink-0"
+        style={{ imageRendering: "pixelated" }}
       />
     </div>
 

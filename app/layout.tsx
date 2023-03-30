@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { Roboto_Flex as Font } from "next/font/google";
-import Image from "next/image";
 import clsx from "clsx";
 import Navbar from "./Navbar";
 import "./globals.css";
@@ -34,13 +35,12 @@ export default function RootLayout({
 
         <div className="grid max-w-lg md:max-w-screen-md md:grid-cols-[190px_1fr] px-5 items-start mx-auto pb-4 md:pb-16 gap-8">
           <aside className="grid gap-4 mx-auto md:sticky md:top-16">
-            <Image
+            <img
               src="/avatar.png"
               alt="xandjiji's avatar"
               width={190}
               height={190}
-              priority
-              className="rounded sepia-[0.3]"
+              className="bg-white rounded sepia-[0.3]"
             />
             <div>
               <h2 className="font-bold text-[50px] leading-none tracking-wider">
