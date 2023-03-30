@@ -1,4 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "showcase",
+  description: "A quick showcase of my personal favorite works",
+};
 
 type ItemProps = {
   name: string;

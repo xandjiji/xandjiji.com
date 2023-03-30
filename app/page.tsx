@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="text-sm text-onBackgroundVariant">
       <p>
-        A creator first, software engineer second. Mostly focused on frontend
-        web development.
+        A creator first, software engineer second. Mostly focused on web
+        development.
       </p>
 
       <ul className="my-6 list-disc grid gap-1 marker: list-inside marker:bg-onBackground">

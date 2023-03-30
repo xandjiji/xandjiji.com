@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "commits",
+  description: "Check out my latest commits to see what I've been up to",
+};
+
 type Commit = {
   sha: string;
   author: { email: string; name: string };
