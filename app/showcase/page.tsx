@@ -40,12 +40,9 @@ const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
     {links.length > 0 && (
       <ul className="flex gap-2">
         {links.map((linkProps) => (
-          <a
-            key={linkProps.href}
-            {...linkProps}
-            className="text-xs"
-            target="_blank"
-          />
+          <li key={linkProps.href}>
+            <a {...linkProps} className="text-xs" target="_blank" />
+          </li>
         ))}
       </ul>
     )}
