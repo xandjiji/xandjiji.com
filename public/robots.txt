@@ -1,0 +1,4 @@
+User-Agent: *
+
+Host: https://xandjiji.com
+Sitemap: https://xandjiji.com/sitemap.xml
