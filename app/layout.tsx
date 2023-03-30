@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <div
           role="none"
-          className="w-full h-8 m:h-16 bg-background sticky top-0 overflow-hidden"
+          className="w-full h-8 md:h-16 bg-background sticky top-0 overflow-hidden"
         />
 
         <div className="grid max-w-lg md:max-w-screen-md md:grid-cols-[190px_1fr] px-5 items-start mx-auto pb-8 md:pb-16 gap-8">
