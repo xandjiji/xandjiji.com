@@ -9,7 +9,7 @@ type ItemProps = {
 };
 
 const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
-  <div className="grid gap-4">
+  <article className="grid gap-4">
     <h3 className="text-2xl leading-none font-bold tracking-wide">{name}</h3>
 
     <div className="flex gap-8 justify-between w-full items-center">
@@ -49,7 +49,7 @@ const Item = ({ name, description, imageSrc, tags, links = [] }: ItemProps) => (
         ))}
       </ul>
     )}
-  </div>
+  </article>
 );
 
 export default function Showcase() {
@@ -57,7 +57,7 @@ export default function Showcase() {
     <main className="grid gap-12">
       <Item
         name="Exevo Pan"
-        description="Started as small toy app, Exevo Pan eventually became a huge website that provides tools, content and paid services for Tibia (MMORPG) players"
+        description="Started as a small toy app, Exevo Pan eventually became a huge website that provides tools, content and paid services for Tibia (MMORPG) players"
         imageSrc="/exevopan.png"
         tags={[
           "nextjs",
@@ -73,7 +73,7 @@ export default function Showcase() {
       />
       <Item
         name="Stardew Helper"
-        description="A companion app for Stardew Valley players. Its fully loaded with tons of information about the game, with a much better UX than using a Wiki. Built while learning React"
+        description="A companion app for Stardew Valley players. It's fully loaded with tons of information about the game, with a much better UX than using a Wiki. Built while learning React"
         imageSrc="/stardew.png"
         tags={["reactjs", "pwa", "ui/ux"]}
         links={[
@@ -89,7 +89,7 @@ export default function Showcase() {
       />
       <Item
         name="Pokemon Trainer Card Generator"
-        description="Playing around with some technologies until I've glued everything together into this fun Twitter bot"
+        description="Played around with some technologies until I've glued everything together into this fun Twitter bot"
         imageSrc="/pokehash.png"
         tags={["nodejs", "twitter api", "image manipulation"]}
         links={[
