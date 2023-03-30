@@ -36,7 +36,7 @@ export default function RootLayout({
         <div className="grid max-w-lg md:max-w-screen-md md:grid-cols-[190px_1fr] px-5 items-start mx-auto pb-8 md:pb-16 gap-8">
           <aside className="grid gap-4 mx-auto md:sticky md:top-16">
             <img
-              src="/avatar.png"
+              src="/avatar.webp"
               alt="xandjiji's avatar"
               width={190}
               height={190}
