@@ -54,7 +54,8 @@ const Slash = () => (
 
 export default async function LastCommits() {
   const lastCommits: Commit[] = await fetch(
-    "https://api.github.com/users/xandjiji/events/public"
+    "https://api.github.com/users/xandjiji/events/public",
+    { next: { revalidate: MILLISECONDS_IN.HOURS * 6 } }
   )
     .then((res) => res.json())
     .then((data: any[]) =>
