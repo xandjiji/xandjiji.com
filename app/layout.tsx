@@ -43,10 +43,10 @@ export default function RootLayout({
               className="bg-white rounded sepia-[0.3]"
             />
             <div>
-              <h2 className="font-bold text-[50px] leading-none tracking-wider">
+              <h2 className="font-bold text-center text-[50px] leading-none tracking-wider">
                 xandjiji
               </h2>
-              <p className="font-light text-onBackgroundVariant">
+              <p className="font-light text-center whitespace-nowrap tracking-wide text-onBackgroundVariant">
                 alexandre regali seleghim
               </p>
             </div>
