@@ -59,6 +59,8 @@ const Slash = () => (
   </span>
 );
 
+export const revalidate = 60;
+
 export default async function LastCommits() {
   const lastCommits: Commit[] = await fetch(
     "https://api.github.com/users/xandjiji/events/public",
