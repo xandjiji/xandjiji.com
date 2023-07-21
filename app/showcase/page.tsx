@@ -102,7 +102,7 @@ export default function Showcase() {
           },
           {
             children: "github",
-            href: "https://github.com/xandjiji/stardew-helperhttps://github.com/xandjiji/Pokemon-Trainer-Card-Generator",
+            href: "https://github.com/xandjiji/Pokemon-Trainer-Card-Generator",
           },
         ]}
       />
