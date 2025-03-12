@@ -14,11 +14,6 @@ export default function Home() {
 
       <ul className="my-6 list-disc grid gap-1 marker: list-inside marker:bg-onBackground">
         <li>
-          Fascinated by <Strong>design systems</Strong> and{" "}
-          <Strong>UI/UX</Strong>
-        </li>
-
-        <li>
           Love <Strong>React.js</Strong> and everything that orbits around it
         </li>
 
@@ -35,7 +30,7 @@ export default function Home() {
         </li>
 
         <li>
-          Building{" "}
+          Built{" "}
           <a
             href="https://www.exevopan.com/"
             target="_blank"
@@ -45,6 +40,18 @@ export default function Home() {
             <Strong>Exevo Pan</Strong>
           </a>
           , completely solo
+        </li>
+
+        <li>
+          Creating my first game:{" "}
+          <a
+            href="https://bestiaryarena.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            className="decoration-accent"
+          >
+            <Strong>Bestiary Arena</Strong>
+          </a>
         </li>
       </ul>
 
