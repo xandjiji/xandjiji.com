@@ -14,10 +14,6 @@ export default function Home() {
 
       <ul className="my-6 list-disc grid gap-1 marker: list-inside marker:bg-onBackground">
         <li>
-          Love <Strong>React.js</Strong> and everything that orbits around it
-        </li>
-
-        <li>
           Currently working at{" "}
           <a
             href="https://www.ifood.com.br/"
