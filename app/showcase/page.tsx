@@ -59,6 +59,17 @@ export default function Showcase() {
   return (
     <main className="grid gap-12">
       <Item
+        name="Bestiary Arena"
+        description="A browser-based idle autobattler game. Casual, free-to-play and PC/Mobile friendly."
+        imageSrc="/bestiary.png"
+        tags={["game development", "game engines"]}
+        links={[
+          { children: "website", href: "https://bestiaryarena.com/" },
+          { children: "discord", href: "https://discord.gg/Xmv445mHan" },
+        ]}
+      />
+
+      <Item
         name="Exevo Pan"
         description="Started as a small toy app, Exevo Pan eventually became a huge website that provides tools, content and paid services for Tibia (MMORPG) players"
         imageSrc="/exevopan.png"
