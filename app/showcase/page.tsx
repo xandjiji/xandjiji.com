@@ -70,6 +70,16 @@ export default function Showcase() {
       />
 
       <Item
+        name="Pixel Recolor"
+        description="A tool to easily change the color palette of pixel art spritesheets."
+        imageSrc="/pixelrecolor.png"
+        tags={["image editor"]}
+        links={[
+          { children: "website", href: "https://www.pixel-recolor.com/" },
+        ]}
+      />
+
+      <Item
         name="Exevo Pan"
         description="Started as a small toy app, Exevo Pan eventually became a huge website that provides tools, content and paid services for Tibia (MMORPG) players"
         imageSrc="/exevopan.png"
